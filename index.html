@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSpace</title>
+
+    <link rel="stylesheet" href="./assets/output.css">
+</head>
+<body class="bg-[#f8f8f3] text-[#243c32]">
+
+    <!-- Navbar -->
+    <header class="border-b border-[#e7e8df] bg-[#f8f8f3]">
+        <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+            <a href="#" class="text-2xl font-serif font-bold tracking-tight">
+                bookspace
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm">
+                <a href="#" class="border-b-2 border-[#243c32] pb-1 font-medium">
+                    Beranda
+                </a>
+                <a href="#" class="text-gray-500 hover:text-[#243c32]">
+                    Jelajahi
+                </a>
+                <a href="#" class="text-gray-500 hover:text-[#243c32]">
+                    Favorit saya
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+    <input
+        id="search-input"
+        type="text"
+        placeholder="Cari judul, penulis, atau genre"
+        class="hidden sm:block w-64 rounded-full border border-[#e5e5dc] bg-white px-4 py-2 text-sm outline-none focus:border-[#243c32]"
+    >
+
+    <button
+        id="search-button"
+        type="button"
+        class="rounded-full border border-[#e5e5dc] px-4 py-2 text-sm hover:bg-white"
+    >
+        Cari
+    </button>
+
+    <button class="rounded-full border border-[#e5e5dc] px-4 py-2 text-sm hover:bg-white">
+        Akun saya
+    </button>
+</div>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="max-w-7xl mx-auto px-6 py-8">
+
+        <section class="grid md:grid-cols-2 overflow-hidden rounded-3xl bg-[#e8ecdf]">
+
+            <!-- Hero Text -->
+            <div class="flex flex-col justify-center p-8 md:p-12">
+
+                <p class="mb-4 text-xs font-semibold tracking-[0.2em] uppercase text-[#71816b]">
+                    Ruang kecil untuk cerita besar
+                </p>
+
+                <h1 class="font-serif text-4xl md:text-5xl leading-tight">
+                    Selamat datang
+                    <br>
+                    di bab berikutnya.
+                </h1>
+
+                <p class="mt-5 max-w-md text-sm leading-7 text-[#5e6c60]">
+                    Temukan bacaan baru, simpan yang kamu suka,
+                    dan biarkan setiap halaman membawamu lebih jauh.
+                </p>
+
+                <div class="mt-8">
+                    <a href="#"
+                       class="inline-flex items-center gap-3 rounded-full bg-[#243c32] px-6 py-3 text-sm text-white hover:bg-[#365548] transition">
+                        Temukan buku
+                        <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Hero Image -->
+            <div class="flex items-center justify-center p-8 md:p-12">
+
+                <div class="text-center">
+                    <img
+                        src="https://covers.openlibrary.org/b/id/10521270-L.jpg"
+                        alt="Cover buku"
+                        class="mx-auto max-h-80 rounded-xl object-contain shadow-xl"
+                    >
+
+                    <p class="mt-4 text-xs text-[#71816b]">
+                        Sebuah cerita menunggu untuk ditemukan.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+    
+
+
+    
+        <!-- Featured Books -->
+        <section class="mt-12">
+
+            <div class="flex items-end justify-between mb-6">
+                <div>
+                    <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[#71816b]">
+                        Featured Books
+                    </p>
+
+                    <h2 class="mt-2 font-serif text-3xl">
+                        Pilihan untuk rak bukumu
+                    </h2>
+
+                    <p class="mt-2 text-sm text-[#71816b]">
+                        Cerita yang sedang ramai dibaca, dan layak kamu temukan.
+                    </p>
+                </div>
+
+                <a href="#" class="hidden sm:inline-flex items-center gap-2 text-sm hover:underline">
+                    Lihat semua buku
+                    <span>→</span>
+                </a>
+            </div>
+
+           <!-- Book Cards -->
+<div
+    id="books-container"
+    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5"
+>
+    <p class="col-span-full text-gray-500">
+        Memuat buku...
+    </p>
+</div>
+
+</section>
+
+
+
+    
+        <!-- Book Categories -->
+        <section class="mt-16">
+
+            <div class="mb-6">
+                <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[#71816b]">
+                    Book Categories
+                </p>
+
+                <h2 class="mt-2 font-serif text-3xl">
+                    Ikuti rasa ingin tahumu
+                </h2>
+
+                <p class="mt-2 text-sm text-[#71816b]">
+                    Jelajahi berbagai topik dan temukan bacaan yang menarik.
+                </p>
+            </div>
+
+            <!-- Category Cards -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+
+    <a href="#" data-category="fiction" class="rounded-xl bg-[#e4e9df] p-5 hover:-translate-y-1 transition">
+        <span class="text-2xl">📖</span>
+        <h3 class="mt-4 font-medium">Fiksi</h3>
+        <p class="mt-1 text-xs text-[#71816b]">Cerita & novel</p>
+    </a>
+
+    <a href="#" data-category="self-help" class="rounded-xl bg-[#efe5d5] p-5 hover:-translate-y-1 transition">
+        <span class="text-2xl">✳</span>
+        <h3 class="mt-4 font-medium">Pengembangan diri</h3>
+        <p class="mt-1 text-xs text-[#71816b]">Belajar & bertumbuh</p>
+    </a>
+
+    <a href="#" data-category="business" class="rounded-xl bg-[#dce8e5] p-5 hover:-translate-y-1 transition">
+        <span class="text-2xl">📈</span>
+        <h3 class="mt-4 font-medium">Bisnis & finansial</h3>
+        <p class="mt-1 text-xs text-[#71816b]">Karier & keuangan</p>
+    </a>
+
+    <a href="#" data-category="philosophy" class="rounded-xl bg-[#e9e5d7] p-5 hover:-translate-y-1 transition">
+        <span class="text-2xl">💡</span>
+        <h3 class="mt-4 font-medium">Filosofi</h3>
+        <p class="mt-1 text-xs text-[#71816b]">Ide & pemikiran</p>
+    </a>
+
+    <a href="#" data-category="biography" class="rounded-xl bg-[#e1e5ef] p-5 hover:-translate-y-1 transition">
+        <span class="text-2xl">📚</span>
+        <h3 class="mt-4 font-medium">Biografi</h3>
+        <p class="mt-1 text-xs text-[#71816b]">Kisah kehidupan</p>
+    </a>
+
+    <a href="#" data-category="fantasy" class="rounded-xl bg-[#eee2e8] p-5 hover:-translate-y-1 transition">
+        <span class="text-2xl">✨</span>
+        <h3 class="mt-4 font-medium">Fantasi</h3>
+        <p class="mt-1 text-xs text-[#71816b]">Dunia imajinasi</p>
+    </a>
+
+</div>
+
+        </section>
+
+    
+    <!-- Footer -->
+    <footer class="border-t border-[#e7e8df] mt-16">
+
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+            <a href="#" class="font-serif text-xl font-bold">
+                bookspace
+            </a>
+
+            <p class="text-sm text-[#71816b] text-center">
+                Ruang untuk membaca, ruang untuk bertumbuh.
+            </p>
+
+            <div class="flex gap-6 text-sm text-[#71816b]">
+                <a href="#" class="hover:text-[#243c32]">
+                    Tentang kami
+                </a>
+
+                <a href="#" class="hover:text-[#243c32]">
+                    Kontak
+                </a>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pb-6 text-center text-xs text-[#71816b]">
+            © 2026 BookSpace. Dibuat untuk proyek Perancangan Web.
+        </div>
+
+    </footer>
+
+    </main>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>
